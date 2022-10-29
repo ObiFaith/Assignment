@@ -1,0 +1,66 @@
+:root{
+    --bg-orange: #eb5020;
+    --bg-green: #05aa42;
+    --bg-blue: #01aefd;
+    --bg-yellow: #ffa401;
+    --bg-black: #1a1c28;
+}
+
+*::before, *, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bg-black);
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    place-content: center;
+}
+
+.main{
+    width: 86%;
+    max-width: 65rem;
+    margin: 0 auto;
+
+    display: grid;
+    grid-gap: .6rem;
+    grid-template-columns: repeat(5, 1fr);   
+    grid-template-rows: repeat(4, 100px); 
+    grid-template-areas: 
+        'one one one two two'
+        'one one one two two'
+        'three three four four four'
+        'three three five five five';
+}
+
+.main div{
+    padding: 2rem;
+}
+
+.main div:nth-child(1){
+    background-color: var(--bg-orange);
+    grid-area: one;
+}
+
+.main div:nth-child(2){
+    background-color: var(--bg-yellow);
+    grid-area: two;
+}
+
+.main div:nth-child(3){
+    background-color: var(--bg-green);
+    grid-area: three;
+}
+
+.main div:nth-child(4){
+    background-color: var(--bg-blue);
+    grid-area: four;
+}
+
+.main div:nth-child(5){
+    background-color: var(--bg-blue);
+    grid-area: five;
+}

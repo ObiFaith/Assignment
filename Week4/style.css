@@ -1,0 +1,112 @@
+*::before, *, *::after{
+    box-sizing: border-box;
+    padding: 0;
+    text-decoration: none;
+    margin: 0;
+}
+
+:root{
+    --bg-orange: hsl(31, 77%, 52%);
+    --bg-cyan: hsl(184, 100%, 22%);
+    --bg-green: hsl(179, 100%, 13%);
+
+    --fs-400: 1rem;
+}
+
+.orange{
+    color: var(--bg-orange);
+}
+
+.cyan{
+    color: var(--bg-cyan);
+}
+
+.green{
+    color: var(--bg-green);
+}
+
+body{
+    font: 1.1rem/1.4 Arial, Helvetica, sans-serif;
+    color: #fff;
+    padding: 2rem 0;
+    letter-spacing: 1px;
+}
+
+img{
+    max-width: 100%;
+}
+
+.btn{
+    display: inline-block;
+    background-color: #fff;
+    padding: .5rem 1rem;
+    border-radius: 4rem;
+    font-weight: bold;
+    font-size: var(--fs-400);
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.container{
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+} 
+
+.container + a{
+    color: #000;
+    text-decoration: underline;    
+}
+
+.d-flex, .flex{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.flex{
+    gap: 20px;
+}
+
+.col{
+    width: 100%;
+    padding: 2rem;
+}
+
+.col p{
+    width: 90%;
+    font-size: var(--fs-400);
+    font-weight: lighter;    
+}
+
+.col:nth-child(1){
+    background-color: var(--bg-orange);
+}
+
+.col:nth-child(2){
+    background-color: var(--bg-cyan);
+}
+
+.col:nth-child(3){
+    background-color: var(--bg-green);
+}
+
+
+@media screen and (min-width: 50rem) {
+    body{
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    .container{
+        width: 80%;
+        max-width: 70rem;        
+    } 
+    .d-flex{
+        flex-direction: row;
+    } 
+    .col p{
+        width: 100%;
+    }
+}
