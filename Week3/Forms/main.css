@@ -1,0 +1,137 @@
+*::before, *, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+
+:root{
+    --primary-clr: #0065ff;
+    --secondary-clr: #ff6f35;
+    --neutral-clr: #7a869a;
+}
+
+body{
+    font: 1.1rem/1.1 Arial, Helvetica, sans-serif;
+    /* background-color: #018aec; */
+    background-image: url('./Imgs/bg-intro-mobile.png');
+    min-height: 100vh;
+    padding: 3rem 0;
+    color: #172b4d;
+}
+
+a{
+    color: #fff;}
+
+img{
+    max-width: 100%;}
+
+.mx-auto{
+    margin: 0 auto;}
+
+.text-center{
+    text-align: center;}
+
+.text-right{
+    text-align: right;}
+
+.fw-bold{
+    font-weight: bold;}
+
+.container{
+    width: 85%;
+    max-width: 37.5rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2rem;
+}
+.hero-title{
+    padding-bottom: 1rem;
+}
+
+.hero-title + p{
+    line-height: 1.4;
+    letter-spacing: 1.6px;
+}
+
+.buttons{
+    margin-top: 2rem;}
+
+.btn{
+    display: inline-block;
+    width: 50%;
+    padding: .6rem 0;
+}
+
+.signup-btn{
+    border-radius: .9rem;
+    background-color: var(--secondary-clr);
+}
+
+input::placeholder, input[type="date"]{
+    color: var(--neutral-clr);
+    font-weight: normal;
+}
+input{
+    padding-bottom: 0.5rem;
+    font-size: 1rem;
+}
+.form-group{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.form-group + .form-group{
+    padding-top: 1.5rem;
+}
+.signup-details{
+    display: flex;
+    flex-flow: column nowrap; 
+    gap: 1.5rem;
+}
+
+@media screen and (max-width: 50rem) {
+    .buttons{
+        border: 2px solid #fff;
+        background-color: var(--primary-clr);
+        display: flex;
+        width: 90%;
+        border-radius: .9rem;
+    }
+    .signup-btn{
+        border-right: 2px solid var(secondary-clr);}
+}
+
+@media screen and (min-width: 50rem) {   
+    body{
+        font: 1.3rem/1.4 Arial, Helvetica, sans-serif;
+        background-image: url('./Imgs/bg-intro-desktop.png');
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        place-content: center;
+    }   
+    .buttons{
+        display: flex;
+        flex-flow: column nowrap; 
+        align-items: center;
+    }  
+    .container{
+        width: 80%;
+        max-width: 75rem;
+
+        flex-flow: row nowrap;
+        align-items: center;
+    }
+    .container > div{
+        width: 100%;
+    }
+    .signin-btn{
+        background-color: var(--primary-clr);
+        border-radius: .9rem;
+        margin-top: .5rem;
+    }
+}
