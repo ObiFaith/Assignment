@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | Homepage</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="user.css">
+    <link rel="stylesheet" href="Icons/css/all.css">
+</head>
+<style>
+    input{
+        border-bottom: 1px solid var(--neutral-clr);
+    }
+    @media screen and (min-width: 50rem) {
+        .row{
+            display: none;
+        }
+        .main{
+            width: 80%;
+            margin: 0 auto;
+            max-width: 1000px;
+        }
+    }
+</style>
+<body>
+    <main class="main">
+        <div class="container mx-auto">
+            <div class="row"><img src="./Imgs/Jan-Business_team_4_prev_ui.png" alt="Welcome images to our new users"></div>            
+            <div class="signup-details">
+                <h1 class="hero-title">Sign Up</h1>
+                <form class="form">
+                    <div class="form-group">
+                        <label for="firstName">
+                            <i class="fa-regular fa-user-circle"></i>
+                        </label>
+                        <input class="fw-bold" placeholder="First name" type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">
+                            <i class="fa-solid fa-user"></i>
+                        </label>
+                        <input class="fw-bold" placeholder="Last name" type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNo">
+                            <i class="fa-solid fa-phone"></i>
+                        </label>
+                        <input class="fw-bold" placeholder="Mobile" type="tel" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">
+                            <i class="fa-solid fa-at"></i>
+                        </label>
+                        <input class="fw-bold" pattern="[a-zA-Z0-9-_&$]+@[a-zA-Z]+\.[a-zA-Z]{2,}" placeholder="Email ID" type="email" title="Enter a Valid Email ID" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">
+                            <i class="fa-solid fa-person"></i>
+                        </label>
+                        <select name="gender" value="Gender">
+                            <option value="none">Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="none">Prefer not to say</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">
+                            <i class="fa-regular fa-calendar"></i>
+                        </label>
+                        <input class="fw-bold" type="date" placeholder="Date of Birth" title="Enter your Date of Birth" required>
+                    </div>
+                    <div class="form-group">
+                        <input class="fw-bold" type="color" placeholder="Favourite Color" title="Enter Favourite Color" required>
+                    </div>
+                </form>
+                <p>By signing up, you're agree to our <a href="#" class="agreement-link">Terms & Conditions</a> and <a href="#" class="agreement-link">Privacy Policy</a></p>
+                <a class="btn signup-btn text-center register" href="./success.html">Submit</a>
+                <p class="text-center">Joined us before? 
+                    <a class="fw-bold" href="./login.html">Login</a>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

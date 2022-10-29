@@ -1,0 +1,30 @@
+a{
+    color: var(--primary-clr);
+    font-weight: 500;
+}
+i{
+    color: #172b4d;
+}
+p{
+    font-size: 1rem;
+}
+.btn, input, .input{
+    width: 100%;
+}
+
+.signup-btn{
+    background-color: var(--primary-clr);
+    color: #fff;
+    border: 0;
+}
+
+a.btn{
+    width: 80%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 50rem) {
+    .btn{
+        padding: .8rem 0;
+    }
+}

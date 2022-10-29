@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome | Homepage</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="./Icons/css/all.css">
+</head>
+<style>
+  body {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    place-content: center;
+  }
+
+  img {
+    width: 7rem;
+  }
+
+  i {
+    color: var(--primary-clr);
+  }
+
+  .container {
+    background-color: #172b4d;
+    color: #fff;
+    padding: 2.5rem;
+    max-width: 50rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1rem;
+    box-shadow: 0 0 10px 0 var(--neutral-clr);
+  }
+
+  .uppercase {
+    text-transform: uppercase;
+  }
+
+  .signup-btn {
+    background-color: var(--primary-clr);
+    padding: .7rem 1.2rem;
+  }
+
+  @media screen and (max-width: 50rem) {
+    .signup-btn {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+
+  @media screen and (min-width: 50rem) {
+    .signup-btn {
+      width: 50%;
+      margin: 0 auto;
+    }
+  }
+</style>
+
+<body>
+  <main>
+    <div class="container mx-auto">
+      <img class="mx-auto" src="./Imgs/Mark.png" alt="Successfully">
+      <div>
+        <h2 class="show hero-title text-center uppercase">Signup Successful</h2>
+        <h2 class="hide hero-title text-center uppercase">Login Successful</h2>
+        <p>You have successfully <span class="show">created an</span><span class="hide">signed into your</span> account.
+          You can close this window and continue using the website</p>
+      </div>
+      <a class="btn signup-btn text-center uppercase mx-auto" href="index.html">Close window</a>
+    </div>
+  </main>
+</body>
+
+</html>
